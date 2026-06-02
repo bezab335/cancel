@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All-in-One</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero Bar -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">All&#8209;in&#8209;One</div>
+      <nav class="nav">
+        <button class="nav-link is-active" data-page="checklist">Checklist</button>
+        <button class="nav-link" data-page="files">Files</button>
+        <button class="nav-link" data-page="building">Still Building</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <!-- Page 1: Checklist -->
+    <section class="page is-active" id="page-checklist">
+      <div class="page-head">
+        <h1>Checklist</h1>
+        <p class="subtitle">Behalte deine Aufgaben im Blick.</p>
+      </div>
+
+      <div class="card">
+        <form class="add-form" id="checklist-form">
+          <input type="text" id="checklist-input" placeholder="Neue Aufgabe hinzuf&uuml;gen&hellip;" autocomplete="off" />
+          <button type="submit" class="btn">Hinzuf&uuml;gen</button>
+        </form>
+        <ul class="checklist" id="checklist-list"></ul>
+        <p class="empty-hint" id="checklist-empty">Noch keine Aufgaben. Leg los! &#9728;</p>
+      </div>
+    </section>
+
+    <!-- Page 2: Files -->
+    <section class="page" id="page-files">
+      <div class="page-head">
+        <h1>Files</h1>
+        <p class="subtitle">Lege deine Dateien ab.</p>
+      </div>
+
+      <div class="card">
+        <label class="dropzone" id="dropzone">
+          <input type="file" id="file-input" multiple hidden />
+          <span class="dropzone-icon">&#128193;</span>
+          <span class="dropzone-text">Dateien hierher ziehen oder klicken zum Ausw&auml;hlen</span>
+        </label>
+        <ul class="file-list" id="file-list"></ul>
+        <p class="empty-hint" id="files-empty">Noch keine Dateien hinzugef&uuml;gt.</p>
+      </div>
+    </section>
+
+    <!-- Page 3: Still Building -->
+    <section class="page" id="page-building">
+      <div class="building">
+        <div class="building-icon">&#128679;</div>
+        <h1>Still Building&hellip;</h1>
+        <p class="subtitle">Hier entsteht bald etwas Neues. Schau sp&auml;ter nochmal vorbei.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>&copy; 2026 All-in-One &mdash; Ger&uuml;st</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
